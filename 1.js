@@ -35,8 +35,6 @@ const newArray = (num) => {
 }
 console.log(newArray(5));
 
-// Что-то на сеньорском
-const newArrayHard = (num) => {
-  return new Array(num).fill('').map((el, index) => String(index + 1).repeat(index + 1));
-}
+// Что-то на сеньорском в одну строчку
+const newArrayHard = (num) => new Array(num).fill('').map((el, index) => String(index + 1).repeat(index + 1));
 console.log(newArrayHard(5));
