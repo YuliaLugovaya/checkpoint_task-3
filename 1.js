@@ -1,6 +1,7 @@
 // Задача 1
 // Заполните массив следующим образом: в первый элемент запишите '1', во второй '22', в третий '333' и так далее.
 
+
 // Первоначальное решение
 function newArr(num) {
   let arr = [];
@@ -11,6 +12,7 @@ function newArr(num) {
   return arr;
 }
 console.log(newArr(5));
+
 
 // Исправленное решение после созвона по разбору домашки
 const newArrUpdate = (num) => {
@@ -24,7 +26,7 @@ console.log(newArrUpdate(5));
 
 
 
-// Новые решения после созвона
+// Новые решения
 
 // Развернуто с помощью new Array
 const newArray = (num) => {
@@ -35,6 +37,7 @@ const newArray = (num) => {
 }
 console.log(newArray(5));
 
-// Что-то на сеньорском в одну строчку
+
+// В одну строчку (оставлю как образец)
 const newArrayHard = (num) => new Array(num).fill('').map((el, index) => String(index + 1).repeat(index + 1));
 console.log(newArrayHard(5));

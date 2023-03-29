@@ -1,6 +1,7 @@
 // Задача 2
 // Дан массив с числами. Узнайте сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти.
 
+
 // Первоначальное решение
 function sumNumbers(arr, num) {
   let sum = 0;
@@ -13,6 +14,7 @@ function sumNumbers(arr, num) {
   }
 }
 console.log(sumNumbers([3, 5, 21], 10))
+
 
 // Исправленное решение после созвона по разбору домашки
 const sumNumbersUpdate = (arr, num) => {
@@ -31,7 +33,7 @@ console.log(sumNumbersUpdate([3, 5, 21], 10));
 
 
 
-// Новые решения после созвона
+// Новые решения
 
 // С помощью while
 const sumNumbers1 = (arr, num) => {
@@ -45,6 +47,7 @@ const sumNumbers1 = (arr, num) => {
 }
 console.log(sumNumbers1([3, 7, 21], 10));
 
+
 // С помощью reduce
 const sumNumbers2 = (arr, num) => {
   return arr.reduce((acc, el, i) => ( // берем reduce и задаем 3 параметра, initialValue - объект с суммой 0 и будущим ответом
@@ -56,6 +59,7 @@ const sumNumbers2 = (arr, num) => {
 }
 console.log(sumNumbers2([3, 7, 21], 10));
 
-// Что-то на сеньорском в одну строчку
+
+// В одну строчку (оставлю как образец)
 const sumNumbers3 = (arr, num) => arr.reduce((acc, el, i) => ({ sum: acc.sum + el, answer: acc.sum + el > num && acc.sum <= num ? i + 1 : acc.answer,}), {sum: 0, answer: undefined}).answer;
 console.log(sumNumbers3([3, 5, 21], 10));
