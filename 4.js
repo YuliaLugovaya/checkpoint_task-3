@@ -17,6 +17,7 @@ console.log(getObject([['a', 1], ['b', 2]]));
 
 
 // Исправленное решение после созвона по разбору домашки
+// Переписала на forEach, убрала лишний цикл
 const getObjectUpdate = (arr) => {
   let obj = {};
   arr.forEach((el) => {
@@ -27,6 +28,17 @@ const getObjectUpdate = (arr) => {
 console.log(getObjectUpdate([['a', 1], ['b', 2]]));
 
 
-// Новое решение
-const getObjectNew = (arr) => Object.fromEntries(arr); // с помощью метода объекта (для работы с массивом массивов, где есть ключ-значение)
+// Новые решения
+
+// С помощью метода объекта (для работы с массивом массивов, где есть ключ-значение)
+const getObjectNew = (arr) => Object.fromEntries(arr);
 console.log(getObjectNew([['a', 1], ['b', 2]]));
+
+// С помощью reduce
+const getObjectNew2 = (arr) => {
+  return arr.reduce((acc, el) => {
+    acc[el[0]] = el[1];
+    return acc;
+  }, {})
+}
+console.log(getObjectNew2([['a', 1], ['b', 2]]));
